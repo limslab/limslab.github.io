@@ -1,5 +1,5 @@
 /*
-	Telephasic by HTML5 UP
+	Verti by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -11,11 +11,10 @@
 
 	// Breakpoints.
 		breakpoints({
-			normal:    [ '1081px',  '1280px'  ],
-			narrow:    [ '821px',   '1080px'  ],
-			narrower:  [ '737px',   '820px'   ],
-			mobile:    [ '481px',   '736px'   ],
-			mobilep:   [ null,      '480px'   ]
+			xlarge:  [ '1281px',  '1680px' ],
+			large:   [ '981px',   '1280px' ],
+			medium:  [ '737px',   '980px'  ],
+			small:   [ null,      '736px'  ]
 		});
 
 	// Play initial animations on page load.
@@ -28,16 +27,15 @@
 	// Dropdowns.
 		$('#nav > ul').dropotron({
 			mode: 'fade',
-			speed: 300,
-			alignment: 'center',
-			noOpenerFade: true
+			noOpenerFade: true,
+			speed: 300
 		});
 
 	// Nav.
 
-		// Buton.
+		// Toggle.
 			$(
-				'<div id="navButton">' +
+				'<div id="navToggle">' +
 					'<a href="#navPanel" class="toggle"></a>' +
 				'</div>'
 			)
@@ -47,7 +45,6 @@
 			$(
 				'<div id="navPanel">' +
 					'<nav>' +
-						'<a href="index.html" class="link depth-0">Home</a>' +
 						$('#nav').navList() +
 					'</nav>' +
 				'</div>'
@@ -56,9 +53,10 @@
 				.panel({
 					delay: 500,
 					hideOnClick: true,
+					hideOnSwipe: true,
 					resetScroll: true,
 					resetForms: true,
-					side: 'top',
+					side: 'left',
 					target: $body,
 					visibleClass: 'navPanel-visible'
 				});
