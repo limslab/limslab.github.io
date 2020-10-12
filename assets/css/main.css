@@ -2703,3 +2703,9 @@ input, select, textarea {
 				}
 
 	}
+.test-tag {
+	color: #000000;
+}
+.major-header {
+	text-align: center;
+}
